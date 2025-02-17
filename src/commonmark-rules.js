@@ -186,9 +186,8 @@ rules.referenceLink = {
         reference = '[' + content + ']: ' + href + title
         break
       default:
-        var id = this.references.length + 1
-        replacement = '[' + content + '][' + id + ']'
-        reference = '[' + id + ']: ' + href + title
+        replacement = '[' + content + '][' + (this.references.length + 1) + ']'
+        reference = '[' + (this.references.length + 1) + ']: ' + href + title
     }
 
     this.references.push(reference)

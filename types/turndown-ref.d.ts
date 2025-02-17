@@ -188,7 +188,7 @@ declare module "turndown-ref" {
         rules: Rules;
         turndown: (input: string | HTMLElement) => string;
         use: (plugin: Function | Array<Function>) => TurndownService;
-        addRule: (key: string, rule: any) => TurndownService;
+        addRule: (key: string, rule: Rule) => TurndownService;
         keep: (filter: string | any[] | Function) => TurndownService;
         remove: (filter: string | any[] | Function) => TurndownService;
         escape: (string: string) => string;

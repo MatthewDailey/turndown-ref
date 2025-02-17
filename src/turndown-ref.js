@@ -93,7 +93,7 @@ TurndownService.prototype = {
    * Adds a rule
    * @public
    * @param {String} key The unique key of the rule
-   * @param {Object} rule The rule
+   * @param {Rule} rule The rule to add
    * @returns {TurndownService} The Turndown instance for chaining
    */
 

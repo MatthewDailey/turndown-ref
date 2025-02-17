@@ -194,8 +194,9 @@ rules.referenceLink = {
     return replacement
   },
 
-  references: [],
+  references: /** @type {string[]} */ ([]),
 
+  /** @type {(options: any) => string} */
   append: function (options) {
     let references = ''
     if (this.references.length) {

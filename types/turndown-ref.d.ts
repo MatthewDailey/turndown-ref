@@ -186,12 +186,12 @@ declare module "turndown-ref" {
         constructor(options: any);
         options: any;
         rules: Rules;
-        turndown: string;
-        use: any;
-        addRule: any;
-        keep: any;
-        remove: any;
-        escape: string;
+        turndown: (input: string | HTMLElement) => string;
+        use: (plugin: Function | Array<Function>) => TurndownService;
+        addRule: (key: string, rule: any) => TurndownService;
+        keep: (filter: string | any[] | Function) => TurndownService;
+        remove: (filter: string | any[] | Function) => TurndownService;
+        escape: (string: string) => string;
     }
     export default TurndownService;
     import Rules from "rules";

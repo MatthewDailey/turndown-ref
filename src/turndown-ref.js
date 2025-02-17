@@ -55,8 +55,7 @@ TurndownService.prototype = {
    * The entry point for converting a string or DOM node to Markdown
    * @public
    * @param {String|HTMLElement} input The string or DOM node to convert
-   * @returns A Markdown representation of the input
-   * @type String
+   * @returns {String} A Markdown representation of the input
    */
 
   turndown: function (input) {
@@ -75,9 +74,8 @@ TurndownService.prototype = {
   /**
    * Add one or more plugins
    * @public
-   * @param {Function|Array} plugin The plugin or array of plugins to add
-   * @returns The Turndown instance for chaining
-   * @type Object
+   * @param {Function|Array<Function>} plugin The plugin or array of plugins to add
+   * @returns {TurndownService} The Turndown instance for chaining
    */
 
   use: function (plugin) {
@@ -96,8 +94,7 @@ TurndownService.prototype = {
    * @public
    * @param {String} key The unique key of the rule
    * @param {Object} rule The rule
-   * @returns The Turndown instance for chaining
-   * @type Object
+   * @returns {TurndownService} The Turndown instance for chaining
    */
 
   addRule: function (key, rule) {
@@ -109,8 +106,7 @@ TurndownService.prototype = {
    * Keep a node (as HTML) that matches the filter
    * @public
    * @param {String|Array|Function} filter The unique key of the rule
-   * @returns The Turndown instance for chaining
-   * @type Object
+   * @returns {TurndownService} The Turndown instance for chaining
    */
 
   keep: function (filter) {
@@ -122,8 +118,7 @@ TurndownService.prototype = {
    * Remove a node that matches the filter
    * @public
    * @param {String|Array|Function} filter The unique key of the rule
-   * @returns The Turndown instance for chaining
-   * @type Object
+   * @returns {TurndownService} The Turndown instance for chaining
    */
 
   remove: function (filter) {
@@ -135,8 +130,7 @@ TurndownService.prototype = {
    * Escapes Markdown syntax
    * @public
    * @param {String} string The string to escape
-   * @returns A string with Markdown syntax escaped
-   * @type String
+   * @returns {String} A string with Markdown syntax escaped
    */
 
   escape: function (string) {
@@ -150,8 +144,7 @@ TurndownService.prototype = {
  * Reduces a DOM node down to its Markdown string equivalent
  * @private
  * @param {HTMLElement} parentNode The node to convert
- * @returns A Markdown representation of the node
- * @type String
+ * @returns {String} A Markdown representation of the node
  */
 
 function process (parentNode) {
@@ -174,8 +167,7 @@ function process (parentNode) {
  * Appends strings as each rule requires and trims the output
  * @private
  * @param {String} output The conversion output
- * @returns A trimmed version of the ouput
- * @type String
+ * @returns {String} A trimmed version of the output
  */
 
 function postProcess (output) {
@@ -193,8 +185,7 @@ function postProcess (output) {
  * Converts an element node to its Markdown equivalent
  * @private
  * @param {HTMLElement} node The node to convert
- * @returns A Markdown representation of the node
- * @type String
+ * @returns {String} A Markdown representation of the node
  */
 
 function replacementForNode (node) {
@@ -214,8 +205,7 @@ function replacementForNode (node) {
  * @private
  * @param {String} output The current conversion output
  * @param {String} replacement The string to append to the output
- * @returns Joined output
- * @type String
+ * @returns {String} Joined output
  */
 
 function join (output, replacement) {
@@ -230,9 +220,8 @@ function join (output, replacement) {
 /**
  * Determines whether an input can be converted
  * @private
- * @param {String|HTMLElement} input Describe this parameter
- * @returns Describe what it returns
- * @type String|Object|Array|Boolean|Number
+ * @param {String|HTMLElement} input The input to check
+ * @returns {Boolean} True if the input can be converted, false otherwise
  */
 
 function canConvert (input) {

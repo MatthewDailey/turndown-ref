@@ -4,7 +4,7 @@ import resolve from '@rollup/plugin-node-resolve'
 
 export default function (config) {
   return {
-    input: 'src/turndown.js',
+    input: 'src/turndown-ref.js',
     output: config.output,
     external: ['@mixmark-io/domino'],
     plugins: [

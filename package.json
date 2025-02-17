@@ -1,7 +1,7 @@
 {
   "name": "turndown-ref",
   "description": "A library that converts HTML to Markdown",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "author": "Matthew Dailey",
   "main": "lib/turndown.cjs.js",
   "module": "lib/turndown.es.js",
@@ -42,8 +42,8 @@
     "url": "https://github.com/MatthewDailey/turndown-ref"
   },
   "scripts": {
-    "build": "npm run build-cjs && npm run build-es && npm run build-umd && npm run build-iife && npm run types",
-    "types": "tsc",
+    "build": "npm run build-cjs && npm run build-es && npm run build-umd && npm run build-iife",
+    "types-deprecated": "tsc",
     "build-cjs": "rollup -c config/rollup.config.cjs.js && rollup -c config/rollup.config.browser.cjs.js",
     "build-es": "rollup -c config/rollup.config.es.js && rollup -c config/rollup.config.browser.es.js",
     "build-umd": "rollup -c config/rollup.config.umd.js && rollup -c config/rollup.config.browser.umd.js",

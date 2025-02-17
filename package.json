@@ -1,7 +1,7 @@
 {
   "name": "turndown-ref",
   "description": "A library that converts HTML to Markdown",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Matthew Dailey",
   "main": "lib/turndown.cjs.js",
   "module": "lib/turndown.es.js",

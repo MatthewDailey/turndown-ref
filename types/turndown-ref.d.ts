@@ -180,7 +180,7 @@ declare module "rules" {
     }
     export default Rules;
 }
-declare module "turndown" {
+declare module "turndown-ref" {
     function TurndownService(options: any): TurndownService;
     class TurndownService {
         constructor(options: any);
